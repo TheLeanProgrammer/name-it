@@ -1,20 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 import headerImage from './../../assets/icon.svg';
 import './Header.css';
 
-const Header = ({ focusedHeader }) => {
+const Header = ({ expandedHeader }) => {
     return (
         <div className="head-container">
             <img
                 src={headerImage}
                 className={`head-image ${
-                    focusedHeader
+                    expandedHeader
                         ? 'head-image-expanded'
                         : 'head-image-contracted'
                 }`}
                 alt="header"
             />
-            <h1 className="head-text">Name It!</h1>
+            <h1
+                className={`head-text ${
+                    expandedHeader
+                        ? 'head-text-expanded'
+                        : 'head-text-contracted'
+                }`}
+            >
+                Name It!
+            </h1>
         </div>
     );
 };
