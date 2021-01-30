@@ -4,7 +4,7 @@ import SearchBox from '../SearchBox/SearchBox';
 import ResultsContainer from '../ResultsContainer/ResultsContainer';
 import './App.css';
 
-import name from './../../lib/nameGenerator';
+const name = require('@rstacruz/startup-name-generator');
 
 class App extends React.Component {
     state = {
